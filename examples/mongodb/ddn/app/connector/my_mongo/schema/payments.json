@@ -1,0 +1,61 @@
+{
+  "name": "payments",
+  "collections": {
+    "payments": {
+      "type": "payments"
+    }
+  },
+  "objectTypes": {
+    "payments": {
+      "fields": {
+        "_id": {
+          "type": {
+            "scalar": "objectId"
+          }
+        },
+        "amount": {
+          "type": {
+            "nullable": {
+              "scalar": "double"
+            }
+          }
+        },
+        "booking_id": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        },
+        "payment_date": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        },
+        "payment_id": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        },
+        "payment_method": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        },
+        "status": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

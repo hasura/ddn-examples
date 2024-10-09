@@ -1,0 +1,154 @@
+---
+kind: ObjectType
+version: v1
+definition:
+  name: Destinations
+  fields:
+    - name: id
+      type: ObjectId!
+    - name: description
+      type: String
+    - name: destinationId
+      type: String
+    - name: location
+      type: String
+    - name: pricePerNight
+      type: Double
+  graphql:
+    typeName: Destinations
+    inputTypeName: DestinationsInput
+  dataConnectorTypeMapping:
+    - dataConnectorName: my_mongo
+      dataConnectorObjectType: destinations
+      fieldMapping:
+        id:
+          column:
+            name: _id
+        description:
+          column:
+            name: description
+        destinationId:
+          column:
+            name: destination_id
+        location:
+          column:
+            name: location
+        pricePerNight:
+          column:
+            name: price_per_night
+
+---
+kind: TypePermissions
+version: v1
+definition:
+  typeName: Destinations
+  permissions:
+    - role: admin
+      output:
+        allowedFields:
+          - id
+          - description
+          - destinationId
+          - location
+          - pricePerNight
+
+---
+kind: BooleanExpressionType
+version: v1
+definition:
+  name: DestinationsBoolExp
+  operand:
+    object:
+      type: Destinations
+      comparableFields:
+        - fieldName: id
+          booleanExpressionType: ObjectIdBoolExp
+        - fieldName: description
+          booleanExpressionType: StringBoolExp
+        - fieldName: destinationId
+          booleanExpressionType: StringBoolExp
+        - fieldName: location
+          booleanExpressionType: StringBoolExp
+        - fieldName: pricePerNight
+          booleanExpressionType: DoubleBoolExp
+      comparableRelationships: []
+  logicalOperators:
+    enable: true
+  isNull:
+    enable: true
+  graphql:
+    typeName: DestinationsBoolExp
+
+---
+kind: AggregateExpression
+version: v1
+definition:
+  name: DestinationsAggExp
+  operand:
+    object:
+      aggregatedType: Destinations
+      aggregatableFields:
+        - fieldName: id
+          aggregateExpression: ObjectIdAggExp
+        - fieldName: description
+          aggregateExpression: StringAggExp
+        - fieldName: destinationId
+          aggregateExpression: StringAggExp
+        - fieldName: location
+          aggregateExpression: StringAggExp
+        - fieldName: pricePerNight
+          aggregateExpression: DoubleAggExp
+  count:
+    enable: true
+  graphql:
+    selectTypeName: DestinationsAggExp
+
+---
+kind: Model
+version: v1
+definition:
+  name: Destinations
+  objectType: Destinations
+  source:
+    dataConnectorName: my_mongo
+    collection: destinations
+  filterExpressionType: DestinationsBoolExp
+  aggregateExpression: DestinationsAggExp
+  orderableFields:
+    - fieldName: id
+      orderByDirections:
+        enableAll: true
+    - fieldName: description
+      orderByDirections:
+        enableAll: true
+    - fieldName: destinationId
+      orderByDirections:
+        enableAll: true
+    - fieldName: location
+      orderByDirections:
+        enableAll: true
+    - fieldName: pricePerNight
+      orderByDirections:
+        enableAll: true
+  graphql:
+    selectMany:
+      queryRootField: destinations
+    selectUniques:
+      - queryRootField: destinationsById
+        uniqueIdentifier:
+          - id
+    orderByExpressionType: DestinationsOrderBy
+    filterInputTypeName: DestinationsFilterInput
+    aggregate:
+      queryRootField: destinationsAggregate
+
+---
+kind: ModelPermissions
+version: v1
+definition:
+  modelName: Destinations
+  permissions:
+    - role: admin
+      select:
+        filter: null
+

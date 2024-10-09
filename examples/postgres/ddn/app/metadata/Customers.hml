@@ -1,0 +1,164 @@
+---
+kind: ObjectType
+version: v1
+definition:
+  name: Customers
+  fields:
+    - name: email
+      type: Varchar
+    - name: firstName
+      type: Varchar
+    - name: id
+      type: Uuid!
+    - name: lastName
+      type: Varchar
+  graphql:
+    typeName: Customers
+    inputTypeName: CustomersInput
+  dataConnectorTypeMapping:
+    - dataConnectorName: my_pg
+      dataConnectorObjectType: customers
+      fieldMapping:
+        email:
+          column:
+            name: email
+        firstName:
+          column:
+            name: first_name
+        id:
+          column:
+            name: id
+        lastName:
+          column:
+            name: last_name
+
+---
+kind: TypePermissions
+version: v1
+definition:
+  typeName: Customers
+  permissions:
+    - role: admin
+      output:
+        allowedFields:
+          - email
+          - firstName
+          - id
+          - lastName
+
+---
+kind: AggregateExpression
+version: v1
+definition:
+  name: CustomersAggExp
+  operand:
+    object:
+      aggregatedType: Customers
+      aggregatableFields:
+        - fieldName: email
+          aggregateExpression: VarcharAggExp
+        - fieldName: firstName
+          aggregateExpression: VarcharAggExp
+        - fieldName: id
+          aggregateExpression: UuidAggExp
+        - fieldName: lastName
+          aggregateExpression: VarcharAggExp
+  count:
+    enable: true
+  graphql:
+    selectTypeName: CustomersAggExp
+
+---
+kind: Model
+version: v1
+definition:
+  name: Customers
+  objectType: Customers
+  source:
+    dataConnectorName: my_pg
+    collection: customers
+  filterExpressionType: CustomersBoolExp
+  aggregateExpression: CustomersAggExp
+  orderableFields:
+    - fieldName: email
+      orderByDirections:
+        enableAll: true
+    - fieldName: firstName
+      orderByDirections:
+        enableAll: true
+    - fieldName: id
+      orderByDirections:
+        enableAll: true
+    - fieldName: lastName
+      orderByDirections:
+        enableAll: true
+  graphql:
+    selectMany:
+      queryRootField: customers
+    selectUniques:
+      - queryRootField: customersById
+        uniqueIdentifier:
+          - id
+    orderByExpressionType: CustomersOrderBy
+    filterInputTypeName: CustomersFilterInput
+    aggregate:
+      queryRootField: customersAggregate
+
+---
+kind: ModelPermissions
+version: v1
+definition:
+  modelName: Customers
+  permissions:
+    - role: admin
+      select:
+        filter: null
+
+---
+kind: Relationship
+version: v1
+definition:
+  name: orders
+  sourceType: Customers
+  target:
+    model:
+      name: Orders
+      relationshipType: Array
+      aggregate:
+        aggregateExpression: OrdersAggExp
+  mapping:
+    - source:
+        fieldPath:
+          - fieldName: id
+      target:
+        modelField:
+          - fieldName: customerId
+  graphql:
+    aggregateFieldName: ordersAggregate
+
+---
+kind: BooleanExpressionType
+version: v1
+definition:
+  name: CustomersBoolExp
+  operand:
+    object:
+      type: Customers
+      comparableFields:
+        - fieldName: email
+          booleanExpressionType: VarcharBoolExp
+        - fieldName: firstName
+          booleanExpressionType: VarcharBoolExp
+        - fieldName: id
+          booleanExpressionType: UuidBoolExp
+        - fieldName: lastName
+          booleanExpressionType: VarcharBoolExp
+      comparableRelationships:
+        - relationshipName: orders
+  logicalOperators:
+    enable: true
+  isNull:
+    enable: true
+  graphql:
+    typeName: CustomersBoolExp
+

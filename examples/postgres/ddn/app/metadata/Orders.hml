@@ -1,0 +1,183 @@
+---
+kind: ObjectType
+version: v1
+definition:
+  name: Orders
+  fields:
+    - name: customerId
+      type: Uuid
+    - name: id
+      type: Uuid!
+    - name: orderDate
+      type: Date
+    - name: totalAmount
+      type: Numeric
+  graphql:
+    typeName: Orders
+    inputTypeName: OrdersInput
+  dataConnectorTypeMapping:
+    - dataConnectorName: my_pg
+      dataConnectorObjectType: orders
+      fieldMapping:
+        customerId:
+          column:
+            name: customer_id
+        id:
+          column:
+            name: id
+        orderDate:
+          column:
+            name: order_date
+        totalAmount:
+          column:
+            name: total_amount
+
+---
+kind: TypePermissions
+version: v1
+definition:
+  typeName: Orders
+  permissions:
+    - role: admin
+      output:
+        allowedFields:
+          - customerId
+          - id
+          - orderDate
+          - totalAmount
+
+---
+kind: AggregateExpression
+version: v1
+definition:
+  name: OrdersAggExp
+  operand:
+    object:
+      aggregatedType: Orders
+      aggregatableFields:
+        - fieldName: customerId
+          aggregateExpression: UuidAggExp
+        - fieldName: id
+          aggregateExpression: UuidAggExp
+        - fieldName: orderDate
+          aggregateExpression: DateAggExp
+        - fieldName: totalAmount
+          aggregateExpression: NumericAggExp
+  count:
+    enable: true
+  graphql:
+    selectTypeName: OrdersAggExp
+
+---
+kind: Model
+version: v1
+definition:
+  name: Orders
+  objectType: Orders
+  source:
+    dataConnectorName: my_pg
+    collection: orders
+  filterExpressionType: OrdersBoolExp
+  aggregateExpression: OrdersAggExp
+  orderableFields:
+    - fieldName: customerId
+      orderByDirections:
+        enableAll: true
+    - fieldName: id
+      orderByDirections:
+        enableAll: true
+    - fieldName: orderDate
+      orderByDirections:
+        enableAll: true
+    - fieldName: totalAmount
+      orderByDirections:
+        enableAll: true
+  graphql:
+    selectMany:
+      queryRootField: orders
+    selectUniques:
+      - queryRootField: ordersById
+        uniqueIdentifier:
+          - id
+    orderByExpressionType: OrdersOrderBy
+    filterInputTypeName: OrdersFilterInput
+    aggregate:
+      queryRootField: ordersAggregate
+
+---
+kind: ModelPermissions
+version: v1
+definition:
+  modelName: Orders
+  permissions:
+    - role: admin
+      select:
+        filter: null
+
+---
+kind: Relationship
+version: v1
+definition:
+  name: orderItems
+  sourceType: Orders
+  target:
+    model:
+      name: OrderItems
+      relationshipType: Array
+      aggregate:
+        aggregateExpression: OrderItemsAggExp
+  mapping:
+    - source:
+        fieldPath:
+          - fieldName: id
+      target:
+        modelField:
+          - fieldName: orderId
+  graphql:
+    aggregateFieldName: orderItemsAggregate
+
+---
+kind: Relationship
+version: v1
+definition:
+  name: customer
+  sourceType: Orders
+  target:
+    model:
+      name: Customers
+      relationshipType: Object
+  mapping:
+    - source:
+        fieldPath:
+          - fieldName: customerId
+      target:
+        modelField:
+          - fieldName: id
+
+---
+kind: BooleanExpressionType
+version: v1
+definition:
+  name: OrdersBoolExp
+  operand:
+    object:
+      type: Orders
+      comparableFields:
+        - fieldName: customerId
+          booleanExpressionType: UuidBoolExp
+        - fieldName: id
+          booleanExpressionType: UuidBoolExp
+        - fieldName: orderDate
+          booleanExpressionType: DateBoolExp
+        - fieldName: totalAmount
+          booleanExpressionType: NumericBoolExp
+      comparableRelationships:
+        - relationshipName: orderItems
+        - relationshipName: customer
+  logicalOperators:
+    enable: true
+  isNull:
+    enable: true
+  graphql:
+    typeName: OrdersBoolExp
+

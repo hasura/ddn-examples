@@ -1,0 +1,16 @@
+services:
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: travel_db
+
+  mongo_seed:
+    build:
+      context: ./seeds
+      dockerfile: Dockerfile
+    links:
+      - mongo
+    depends_on:
+      - mongo

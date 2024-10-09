@@ -1,0 +1,68 @@
+{
+  "name": "bookings",
+  "collections": {
+    "bookings": {
+      "type": "bookings"
+    }
+  },
+  "objectTypes": {
+    "bookings": {
+      "fields": {
+        "_id": {
+          "type": {
+            "scalar": "objectId"
+          }
+        },
+        "booking_date": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        },
+        "booking_id": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        },
+        "check_in": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        },
+        "check_out": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        },
+        "destination_id": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        },
+        "total_price": {
+          "type": {
+            "nullable": {
+              "scalar": "double"
+            }
+          }
+        },
+        "user_id": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

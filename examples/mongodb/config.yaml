@@ -1,0 +1,7 @@
+name: MongoDB
+connector_hub_name: hasura/mongodb
+connector_name: my_mongo
+env_vars:
+  APP_MY_MONGO_DATABASE_URI: mongodb://local.hasura.dev:27017/travel_db
+env_mappings:
+  MONGODB_DATABASE_URI: APP_MY_MONGO_DATABASE_URI

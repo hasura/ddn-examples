@@ -1,0 +1,5 @@
+name: Postgres
+connector_hub_name: hasura/postgres
+connector_name: my_pg
+env_vars:
+  APP_MY_PG_CONNECTION_URI: "postgresql://postgres:postgres@local.hasura.dev:5432/postgres"

@@ -1,0 +1,193 @@
+---
+kind: ObjectType
+version: v1
+definition:
+  name: Bookings
+  fields:
+    - name: id
+      type: ObjectId!
+    - name: bookingDate
+      type: String
+    - name: bookingId
+      type: String
+    - name: checkIn
+      type: String
+    - name: checkOut
+      type: String
+    - name: destinationId
+      type: String
+    - name: totalPrice
+      type: Double
+    - name: userId
+      type: String
+  graphql:
+    typeName: Bookings
+    inputTypeName: BookingsInput
+  dataConnectorTypeMapping:
+    - dataConnectorName: my_mongo
+      dataConnectorObjectType: bookings
+      fieldMapping:
+        id:
+          column:
+            name: _id
+        bookingDate:
+          column:
+            name: booking_date
+        bookingId:
+          column:
+            name: booking_id
+        checkIn:
+          column:
+            name: check_in
+        checkOut:
+          column:
+            name: check_out
+        destinationId:
+          column:
+            name: destination_id
+        totalPrice:
+          column:
+            name: total_price
+        userId:
+          column:
+            name: user_id
+
+---
+kind: TypePermissions
+version: v1
+definition:
+  typeName: Bookings
+  permissions:
+    - role: admin
+      output:
+        allowedFields:
+          - id
+          - bookingDate
+          - bookingId
+          - checkIn
+          - checkOut
+          - destinationId
+          - totalPrice
+          - userId
+
+---
+kind: BooleanExpressionType
+version: v1
+definition:
+  name: BookingsBoolExp
+  operand:
+    object:
+      type: Bookings
+      comparableFields:
+        - fieldName: id
+          booleanExpressionType: ObjectIdBoolExp
+        - fieldName: bookingDate
+          booleanExpressionType: StringBoolExp
+        - fieldName: bookingId
+          booleanExpressionType: StringBoolExp
+        - fieldName: checkIn
+          booleanExpressionType: StringBoolExp
+        - fieldName: checkOut
+          booleanExpressionType: StringBoolExp
+        - fieldName: destinationId
+          booleanExpressionType: StringBoolExp
+        - fieldName: totalPrice
+          booleanExpressionType: DoubleBoolExp
+        - fieldName: userId
+          booleanExpressionType: StringBoolExp
+      comparableRelationships: []
+  logicalOperators:
+    enable: true
+  isNull:
+    enable: true
+  graphql:
+    typeName: BookingsBoolExp
+
+---
+kind: AggregateExpression
+version: v1
+definition:
+  name: BookingsAggExp
+  operand:
+    object:
+      aggregatedType: Bookings
+      aggregatableFields:
+        - fieldName: id
+          aggregateExpression: ObjectIdAggExp
+        - fieldName: bookingDate
+          aggregateExpression: StringAggExp
+        - fieldName: bookingId
+          aggregateExpression: StringAggExp
+        - fieldName: checkIn
+          aggregateExpression: StringAggExp
+        - fieldName: checkOut
+          aggregateExpression: StringAggExp
+        - fieldName: destinationId
+          aggregateExpression: StringAggExp
+        - fieldName: totalPrice
+          aggregateExpression: DoubleAggExp
+        - fieldName: userId
+          aggregateExpression: StringAggExp
+  count:
+    enable: true
+  graphql:
+    selectTypeName: BookingsAggExp
+
+---
+kind: Model
+version: v1
+definition:
+  name: Bookings
+  objectType: Bookings
+  source:
+    dataConnectorName: my_mongo
+    collection: bookings
+  filterExpressionType: BookingsBoolExp
+  aggregateExpression: BookingsAggExp
+  orderableFields:
+    - fieldName: id
+      orderByDirections:
+        enableAll: true
+    - fieldName: bookingDate
+      orderByDirections:
+        enableAll: true
+    - fieldName: bookingId
+      orderByDirections:
+        enableAll: true
+    - fieldName: checkIn
+      orderByDirections:
+        enableAll: true
+    - fieldName: checkOut
+      orderByDirections:
+        enableAll: true
+    - fieldName: destinationId
+      orderByDirections:
+        enableAll: true
+    - fieldName: totalPrice
+      orderByDirections:
+        enableAll: true
+    - fieldName: userId
+      orderByDirections:
+        enableAll: true
+  graphql:
+    selectMany:
+      queryRootField: bookings
+    selectUniques:
+      - queryRootField: bookingsById
+        uniqueIdentifier:
+          - id
+    orderByExpressionType: BookingsOrderBy
+    filterInputTypeName: BookingsFilterInput
+    aggregate:
+      queryRootField: bookingsAggregate
+
+---
+kind: ModelPermissions
+version: v1
+definition:
+  modelName: Bookings
+  permissions:
+    - role: admin
+      select:
+        filter: null
+

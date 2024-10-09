@@ -1,0 +1,61 @@
+{
+  "name": "reviews",
+  "collections": {
+    "reviews": {
+      "type": "reviews"
+    }
+  },
+  "objectTypes": {
+    "reviews": {
+      "fields": {
+        "_id": {
+          "type": {
+            "scalar": "objectId"
+          }
+        },
+        "destination_id": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        },
+        "rating": {
+          "type": {
+            "nullable": {
+              "scalar": "int"
+            }
+          }
+        },
+        "review_date": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        },
+        "review_id": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        },
+        "review_text": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        },
+        "user_id": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+---
+kind: ObjectType
+version: v1
+definition:
+  name: Products
+  fields:
+    - name: id
+      type: Uuid!
+    - name: name
+      type: Varchar
+    - name: price
+      type: Numeric
+    - name: stock
+      type: Int4
+  graphql:
+    typeName: Products
+    inputTypeName: ProductsInput
+  dataConnectorTypeMapping:
+    - dataConnectorName: my_pg
+      dataConnectorObjectType: products
+
+---
+kind: TypePermissions
+version: v1
+definition:
+  typeName: Products
+  permissions:
+    - role: admin
+      output:
+        allowedFields:
+          - id
+          - name
+          - price
+          - stock
+
+---
+kind: AggregateExpression
+version: v1
+definition:
+  name: ProductsAggExp
+  operand:
+    object:
+      aggregatedType: Products
+      aggregatableFields:
+        - fieldName: id
+          aggregateExpression: UuidAggExp
+        - fieldName: name
+          aggregateExpression: VarcharAggExp
+        - fieldName: price
+          aggregateExpression: NumericAggExp
+        - fieldName: stock
+          aggregateExpression: Int4AggExp
+  count:
+    enable: true
+  graphql:
+    selectTypeName: ProductsAggExp
+
+---
+kind: Model
+version: v1
+definition:
+  name: Products
+  objectType: Products
+  source:
+    dataConnectorName: my_pg
+    collection: products
+  filterExpressionType: ProductsBoolExp
+  aggregateExpression: ProductsAggExp
+  orderableFields:
+    - fieldName: id
+      orderByDirections:
+        enableAll: true
+    - fieldName: name
+      orderByDirections:
+        enableAll: true
+    - fieldName: price
+      orderByDirections:
+        enableAll: true
+    - fieldName: stock
+      orderByDirections:
+        enableAll: true
+  graphql:
+    selectMany:
+      queryRootField: products
+    selectUniques:
+      - queryRootField: productsById
+        uniqueIdentifier:
+          - id
+    orderByExpressionType: ProductsOrderBy
+    filterInputTypeName: ProductsFilterInput
+    aggregate:
+      queryRootField: productsAggregate
+
+---
+kind: ModelPermissions
+version: v1
+definition:
+  modelName: Products
+  permissions:
+    - role: admin
+      select:
+        filter: null
+
+---
+kind: Relationship
+version: v1
+definition:
+  name: orderItems
+  sourceType: Products
+  target:
+    model:
+      name: OrderItems
+      relationshipType: Array
+      aggregate:
+        aggregateExpression: OrderItemsAggExp
+  mapping:
+    - source:
+        fieldPath:
+          - fieldName: id
+      target:
+        modelField:
+          - fieldName: productId
+  graphql:
+    aggregateFieldName: orderItemsAggregate
+
+---
+kind: BooleanExpressionType
+version: v1
+definition:
+  name: ProductsBoolExp
+  operand:
+    object:
+      type: Products
+      comparableFields:
+        - fieldName: id
+          booleanExpressionType: UuidBoolExp
+        - fieldName: name
+          booleanExpressionType: VarcharBoolExp
+        - fieldName: price
+          booleanExpressionType: NumericBoolExp
+        - fieldName: stock
+          booleanExpressionType: Int4BoolExp
+      comparableRelationships:
+        - relationshipName: orderItems
+  logicalOperators:
+    enable: true
+  isNull:
+    enable: true
+  graphql:
+    typeName: ProductsBoolExp
+

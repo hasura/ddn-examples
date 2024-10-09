@@ -1,0 +1,902 @@
+[
+  {
+    "booking_id": "488fc4e3-2824-4cc0-a136-6266ca3554a1",
+    "user_id": "6b25cc87-24f1-4d05-93d5-bdb65dc13ef9",
+    "destination_id": "fab46c9d-8fdd-4bad-8e25-f79ae9fe0323",
+    "booking_date": "2024-09-19",
+    "check_in": "2024-09-25",
+    "check_out": "2025-05-04",
+    "total_price": 1784.95
+  },
+  {
+    "booking_id": "8615cc58-c6bc-412a-b8c4-9f034479726f",
+    "user_id": "98b05820-4384-4f76-b3bc-3b46d4f762b6",
+    "destination_id": "1983e578-a2cb-4504-8d6e-7b6328ffb8ba",
+    "booking_date": "2024-05-26",
+    "check_in": "2023-11-21",
+    "check_out": "2025-06-25",
+    "total_price": 915.12
+  },
+  {
+    "booking_id": "07a31d0d-41dc-4269-a44d-a76bf823b857",
+    "user_id": "89fd687c-798f-48fe-b00c-38aa1e9e4067",
+    "destination_id": "1983e578-a2cb-4504-8d6e-7b6328ffb8ba",
+    "booking_date": "2024-07-14",
+    "check_in": "2024-01-15",
+    "check_out": "2025-03-25",
+    "total_price": 2059.02
+  },
+  {
+    "booking_id": "03171440-1a8d-482e-b10e-a90914e6e3ac",
+    "user_id": "74484ac3-7352-41b4-867a-7fa3fd3a910d",
+    "destination_id": "21b5a3a7-6400-4d28-8c6a-cc4c2892a501",
+    "booking_date": "2024-10-04",
+    "check_in": "2024-09-23",
+    "check_out": "2025-06-08",
+    "total_price": 3459.1
+  },
+  {
+    "booking_id": "6f168060-175c-4536-845e-0bea9b9f6926",
+    "user_id": "1b9f9206-bfa1-4554-99c6-dd2184d2bffb",
+    "destination_id": "6d8a4f69-de21-45d5-bc80-29d0127e1629",
+    "booking_date": "2024-01-12",
+    "check_in": "2023-12-28",
+    "check_out": "2025-01-17",
+    "total_price": 4540.9
+  },
+  {
+    "booking_id": "87a47981-5f88-4a56-945b-64ef39feb8b4",
+    "user_id": "348bdc82-43c2-40dd-a006-cfa35bc2fc1a",
+    "destination_id": "8a44f7b6-f7dc-4979-8c22-4f3f754c0cfb",
+    "booking_date": "2024-02-26",
+    "check_in": "2024-09-03",
+    "check_out": "2025-06-20",
+    "total_price": 4440.24
+  },
+  {
+    "booking_id": "ad723355-abce-4869-a93c-8274df8efe4c",
+    "user_id": "5f0c5e21-83e0-4157-a3f0-4cd5e80a7dc3",
+    "destination_id": "a7af9cbe-9fde-42e2-8349-a452745e7cee",
+    "booking_date": "2024-07-08",
+    "check_in": "2024-06-08",
+    "check_out": "2025-04-23",
+    "total_price": 4411.96
+  },
+  {
+    "booking_id": "c86ff4f7-3dfc-4075-be08-87508d9740a2",
+    "user_id": "63c85279-fc5a-4369-89df-72ec0ffac1a6",
+    "destination_id": "76a8c24f-8f59-4e04-b215-a30460196029",
+    "booking_date": "2024-03-22",
+    "check_in": "2024-08-26",
+    "check_out": "2025-05-20",
+    "total_price": 5385.05
+  },
+  {
+    "booking_id": "7864d9ab-e368-4b88-b494-9a9910f82275",
+    "user_id": "fa32bb8e-de02-442b-b68c-2c40d74d538b",
+    "destination_id": "f339850e-50a7-4f86-ba2b-f9edc79426ce",
+    "booking_date": "2024-08-16",
+    "check_in": "2023-11-21",
+    "check_out": "2025-03-08",
+    "total_price": 1165.36
+  },
+  {
+    "booking_id": "43248167-b964-4ec5-97d2-458171ae7b81",
+    "user_id": "73a62ce2-995a-44fb-8735-381b396ed78b",
+    "destination_id": "6897061a-3a82-4359-83b8-a3bc9cd2a481",
+    "booking_date": "2024-08-27",
+    "check_in": "2024-09-13",
+    "check_out": "2024-11-17",
+    "total_price": 1296.3
+  },
+  {
+    "booking_id": "c06ec3af-109c-463d-b39d-a9806adaee59",
+    "user_id": "c6e14c5f-b364-468b-8bed-b0cce1e5528a",
+    "destination_id": "5c98ac5c-83f0-4ad8-b55f-9bc6a466c2c8",
+    "booking_date": "2024-04-30",
+    "check_in": "2024-06-20",
+    "check_out": "2025-05-14",
+    "total_price": 450.36
+  },
+  {
+    "booking_id": "29ed8fe7-88fe-4f0c-b821-e3244ca28136",
+    "user_id": "cafc6d0c-6557-4897-abf4-672770624f39",
+    "destination_id": "76a8c24f-8f59-4e04-b215-a30460196029",
+    "booking_date": "2024-06-01",
+    "check_in": "2024-08-29",
+    "check_out": "2025-04-13",
+    "total_price": 5874.6
+  },
+  {
+    "booking_id": "bf37356b-2b4f-46bb-922f-4d0d72910c6f",
+    "user_id": "5dded282-e680-457e-8ee4-88b9209b06bb",
+    "destination_id": "59ec2127-7f79-4690-a0f5-25567378ef64",
+    "booking_date": "2024-03-21",
+    "check_in": "2024-02-24",
+    "check_out": "2025-07-18",
+    "total_price": 1743.17
+  },
+  {
+    "booking_id": "6d1fb6f7-9645-46fd-806e-90c0fe89c9a9",
+    "user_id": "89fd687c-798f-48fe-b00c-38aa1e9e4067",
+    "destination_id": "972a91e2-5815-4f22-ab1e-096efbd6f358",
+    "booking_date": "2024-07-26",
+    "check_in": "2024-03-07",
+    "check_out": "2025-10-03",
+    "total_price": 582.56
+  },
+  {
+    "booking_id": "fd1f66f7-b29f-4e73-8efe-84e372a99c0f",
+    "user_id": "d9d8ffa9-d4c0-4d85-b3a4-1ba4e6a7fc0c",
+    "destination_id": "16543e97-0f60-4c8c-92e5-354cf3e2dea4",
+    "booking_date": "2024-01-18",
+    "check_in": "2024-01-20",
+    "check_out": "2024-12-16",
+    "total_price": 2771.46
+  },
+  {
+    "booking_id": "62f5f5f6-95a9-4207-b166-898633f7a9a3",
+    "user_id": "1b9f9206-bfa1-4554-99c6-dd2184d2bffb",
+    "destination_id": "18705729-c4d6-4d8b-9da1-f2fff787f868",
+    "booking_date": "2024-01-31",
+    "check_in": "2024-09-30",
+    "check_out": "2025-05-15",
+    "total_price": 476.61
+  },
+  {
+    "booking_id": "01ada0cc-8980-40cc-8ae9-8734a3401bb3",
+    "user_id": "5d2cb924-8b66-4e80-b51f-815b9f421406",
+    "destination_id": "3da7f423-d4a6-4656-a9f1-9e096bd9af65",
+    "booking_date": "2024-09-05",
+    "check_in": "2023-10-26",
+    "check_out": "2025-04-10",
+    "total_price": 797.37
+  },
+  {
+    "booking_id": "4a0011c1-09cf-41dc-9b70-2875bafea4f1",
+    "user_id": "1b9f9206-bfa1-4554-99c6-dd2184d2bffb",
+    "destination_id": "ab288199-fc36-47e2-9474-6087607cf42d",
+    "booking_date": "2024-05-19",
+    "check_in": "2024-02-16",
+    "check_out": "2025-07-27",
+    "total_price": 118.44
+  },
+  {
+    "booking_id": "49ab030f-7d75-410c-b6c8-e707accd853b",
+    "user_id": "7fc0a1d7-235c-4845-b14a-c1bcf501ec80",
+    "destination_id": "0bc5577f-a564-4ed7-b425-80c57b5abcb8",
+    "booking_date": "2024-07-10",
+    "check_in": "2024-08-11",
+    "check_out": "2025-06-13",
+    "total_price": 290.84
+  },
+  {
+    "booking_id": "f32b0cc7-b5ef-4b84-9e7c-e210190bd479",
+    "user_id": "cff6f889-60ba-4c75-aa79-34b182ff8c59",
+    "destination_id": "f3b60dc6-7859-4788-b177-172c11ab65ae",
+    "booking_date": "2024-09-24",
+    "check_in": "2023-10-16",
+    "check_out": "2025-02-21",
+    "total_price": 3244.32
+  },
+  {
+    "booking_id": "e58cc675-2262-43c8-98b6-499d1452501e",
+    "user_id": "2a22d074-3480-4da1-95ea-a80512155f6c",
+    "destination_id": "24874805-fa48-45cb-a7da-1532d237a7f6",
+    "booking_date": "2024-07-07",
+    "check_in": "2024-07-26",
+    "check_out": "2025-04-13",
+    "total_price": 722.52
+  },
+  {
+    "booking_id": "e75a7aaa-30d2-481e-aa06-753e32ee411e",
+    "user_id": "ee98b02b-ae0e-42b0-a28f-7c8a6d41cbf2",
+    "destination_id": "a0bf0f43-738a-4d9c-b459-f27ff8714f79",
+    "booking_date": "2024-09-22",
+    "check_in": "2024-07-27",
+    "check_out": "2025-08-29",
+    "total_price": 2089.88
+  },
+  {
+    "booking_id": "c8e30de9-883f-45fe-a955-4a6b95825d00",
+    "user_id": "fc6bfda2-1bcb-4bd1-8e34-21f10255c263",
+    "destination_id": "a7536d8d-7750-488a-9759-5031b7e36318",
+    "booking_date": "2024-05-02",
+    "check_in": "2024-05-30",
+    "check_out": "2025-06-17",
+    "total_price": 851.94
+  },
+  {
+    "booking_id": "a0585307-aa17-4572-944d-82370f769683",
+    "user_id": "087b106c-4f54-4438-ad20-25fa05f590ef",
+    "destination_id": "6d8a4f69-de21-45d5-bc80-29d0127e1629",
+    "booking_date": "2024-06-23",
+    "check_in": "2023-12-22",
+    "check_out": "2025-01-02",
+    "total_price": 1397.2
+  },
+  {
+    "booking_id": "83f15c26-bdf9-40d7-981d-82ce846ca457",
+    "user_id": "bd9e9531-9773-4b02-b03f-001fd8b7017a",
+    "destination_id": "e1c57cb5-53a2-410d-95fa-9d4eaa83897d",
+    "booking_date": "2024-01-08",
+    "check_in": "2024-02-07",
+    "check_out": "2025-02-26",
+    "total_price": 5064.64
+  },
+  {
+    "booking_id": "44c30c78-c476-4256-a1d5-15bc86a60495",
+    "user_id": "5d2cb924-8b66-4e80-b51f-815b9f421406",
+    "destination_id": "f3b60dc6-7859-4788-b177-172c11ab65ae",
+    "booking_date": "2024-02-22",
+    "check_in": "2024-08-11",
+    "check_out": "2025-06-22",
+    "total_price": 2162.88
+  },
+  {
+    "booking_id": "2ca1cd33-f106-4ed1-9191-2ebca9231cd4",
+    "user_id": "b1224b32-de4b-47f7-ae8f-d221f0daa792",
+    "destination_id": "7d47c3b6-0524-49b5-82fd-19a9e775846c",
+    "booking_date": "2024-07-27",
+    "check_in": "2024-03-25",
+    "check_out": "2024-10-19",
+    "total_price": 3288.22
+  },
+  {
+    "booking_id": "aae60add-2897-4c06-8754-e77d8bbfda6b",
+    "user_id": "7a933633-6cc7-41ee-afd8-69e8fca105cd",
+    "destination_id": "3da7f423-d4a6-4656-a9f1-9e096bd9af65",
+    "booking_date": "2024-09-23",
+    "check_in": "2024-08-04",
+    "check_out": "2025-04-17",
+    "total_price": 113.91
+  },
+  {
+    "booking_id": "82120792-3501-46ef-8536-c32cdfa94543",
+    "user_id": "fa32bb8e-de02-442b-b68c-2c40d74d538b",
+    "destination_id": "16543e97-0f60-4c8c-92e5-354cf3e2dea4",
+    "booking_date": "2024-06-09",
+    "check_in": "2024-09-08",
+    "check_out": "2024-10-13",
+    "total_price": 1385.73
+  },
+  {
+    "booking_id": "12d2ed6d-548d-402a-a518-9597b90e4f52",
+    "user_id": "bf576acf-6545-4765-b228-1d617359ec44",
+    "destination_id": "a7536d8d-7750-488a-9759-5031b7e36318",
+    "booking_date": "2024-01-16",
+    "check_in": "2023-11-09",
+    "check_out": "2025-07-19",
+    "total_price": 283.98
+  },
+  {
+    "booking_id": "a7c7f6e2-f80a-4930-abb0-cffe0b47ee42",
+    "user_id": "c9fd1193-31cb-41b1-945d-0a752fca0fb6",
+    "destination_id": "5afd9463-ad16-4a44-bb8d-51514a05a4f4",
+    "booking_date": "2024-09-15",
+    "check_in": "2024-09-23",
+    "check_out": "2025-07-31",
+    "total_price": 5200.58
+  },
+  {
+    "booking_id": "f0090bfb-24e8-4c0b-b524-418e140c2221",
+    "user_id": "7e6e7df9-7f2e-49c3-9cc0-f416a537649f",
+    "destination_id": "6897061a-3a82-4359-83b8-a3bc9cd2a481",
+    "booking_date": "2024-03-03",
+    "check_in": "2024-01-07",
+    "check_out": "2024-12-24",
+    "total_price": 3888.9
+  },
+  {
+    "booking_id": "5988b231-7bc7-47ab-8c97-4ce7463786a8",
+    "user_id": "5cfb5474-23ac-438f-b930-a208e88b1905",
+    "destination_id": "e1029725-46f2-436c-97f2-c1250b8677ff",
+    "booking_date": "2024-03-21",
+    "check_in": "2024-07-23",
+    "check_out": "2025-06-28",
+    "total_price": 3235.68
+  },
+  {
+    "booking_id": "45291be4-fceb-4cc1-aa98-a0f2cc096008",
+    "user_id": "56827f92-30ab-402e-ba39-d78b04f0e577",
+    "destination_id": "21b5a3a7-6400-4d28-8c6a-cc4c2892a501",
+    "booking_date": "2024-07-24",
+    "check_in": "2024-05-04",
+    "check_out": "2025-01-25",
+    "total_price": 3113.19
+  },
+  {
+    "booking_id": "de180793-3953-4191-8046-1d6f3976b879",
+    "user_id": "e4351648-ddd4-4faa-995f-33e287692b7a",
+    "destination_id": "4c4e834d-c0a5-494f-80b8-e63ba2ddabf5",
+    "booking_date": "2024-06-28",
+    "check_in": "2023-11-17",
+    "check_out": "2025-07-17",
+    "total_price": 232.6
+  },
+  {
+    "booking_id": "18e96ba4-da90-4646-af3a-75a9095d549e",
+    "user_id": "5997e311-5f35-4ea5-8984-830b7e122787",
+    "destination_id": "2c0e5340-7498-4302-8664-8825bd7470f3",
+    "booking_date": "2024-04-10",
+    "check_in": "2023-10-28",
+    "check_out": "2025-05-07",
+    "total_price": 3985.19
+  },
+  {
+    "booking_id": "e5000647-6526-4cef-941f-d26fcd8ff16f",
+    "user_id": "5178786d-ca7e-466e-b4e3-0c85e62f7912",
+    "destination_id": "5c98ac5c-83f0-4ad8-b55f-9bc6a466c2c8",
+    "booking_date": "2024-09-17",
+    "check_in": "2024-04-17",
+    "check_out": "2025-01-02",
+    "total_price": 3602.88
+  },
+  {
+    "booking_id": "9c821acc-c152-4ec6-987b-8e064b639156",
+    "user_id": "fa32bb8e-de02-442b-b68c-2c40d74d538b",
+    "destination_id": "9d092ebe-df39-410e-bf1f-ae6b0267fcad",
+    "booking_date": "2024-03-11",
+    "check_in": "2023-11-14",
+    "check_out": "2025-02-15",
+    "total_price": 2799.52
+  },
+  {
+    "booking_id": "4d9a66f2-92c2-4508-b48b-6a446c7f08ff",
+    "user_id": "fd26b175-7c04-4d68-bbdb-2ac46750bfd9",
+    "destination_id": "f339850e-50a7-4f86-ba2b-f9edc79426ce",
+    "booking_date": "2024-05-02",
+    "check_in": "2023-11-30",
+    "check_out": "2024-12-19",
+    "total_price": 915.64
+  },
+  {
+    "booking_id": "c1d1ef10-f1ac-469c-98bd-a0beba7fd3b0",
+    "user_id": "daecc429-7689-4c9d-9b8d-fbc94b04017f",
+    "destination_id": "972a91e2-5815-4f22-ab1e-096efbd6f358",
+    "booking_date": "2024-08-19",
+    "check_in": "2023-12-11",
+    "check_out": "2025-06-11",
+    "total_price": 317.76
+  },
+  {
+    "booking_id": "874b69d2-4463-4b28-bac4-64985bd2978e",
+    "user_id": "a4c49737-09e4-43e1-852f-351ba061ebe6",
+    "destination_id": "963750a3-93e2-4ba6-9183-9569ee848854",
+    "booking_date": "2024-06-07",
+    "check_in": "2024-09-07",
+    "check_out": "2025-01-18",
+    "total_price": 1364.12
+  },
+  {
+    "booking_id": "4231998a-3c64-4ce7-9f44-cbea6f094b9e",
+    "user_id": "087b106c-4f54-4438-ad20-25fa05f590ef",
+    "destination_id": "d5870134-45d2-493a-8fc3-e36f42f8f3a2",
+    "booking_date": "2024-09-17",
+    "check_in": "2023-10-23",
+    "check_out": "2024-12-14",
+    "total_price": 2835.7
+  },
+  {
+    "booking_id": "01f72d52-e870-434c-9dde-9f6da562c428",
+    "user_id": "7a933633-6cc7-41ee-afd8-69e8fca105cd",
+    "destination_id": "a7536d8d-7750-488a-9759-5031b7e36318",
+    "booking_date": "2024-08-06",
+    "check_in": "2024-02-09",
+    "check_out": "2025-05-15",
+    "total_price": 2555.82
+  },
+  {
+    "booking_id": "fae63558-9a79-4473-87b0-5dec4ca1027b",
+    "user_id": "de94bbe7-820c-4198-9d24-74bf62cb0295",
+    "destination_id": "4c4e834d-c0a5-494f-80b8-e63ba2ddabf5",
+    "booking_date": "2024-04-16",
+    "check_in": "2024-09-30",
+    "check_out": "2025-08-10",
+    "total_price": 3256.4
+  },
+  {
+    "booking_id": "1d3a237b-487f-47a7-95af-afb639134999",
+    "user_id": "98b05820-4384-4f76-b3bc-3b46d4f762b6",
+    "destination_id": "86a15738-a1c9-4785-baaf-c25e40f08b40",
+    "booking_date": "2024-08-01",
+    "check_in": "2024-03-02",
+    "check_out": "2024-11-25",
+    "total_price": 4203.1
+  },
+  {
+    "booking_id": "69e26df2-1da4-41ba-9eed-806e9bb44479",
+    "user_id": "7fc0a1d7-235c-4845-b14a-c1bcf501ec80",
+    "destination_id": "a68d95c7-68b7-44d5-9299-6fde84e60771",
+    "booking_date": "2024-07-04",
+    "check_in": "2023-12-27",
+    "check_out": "2024-12-06",
+    "total_price": 1772.04
+  },
+  {
+    "booking_id": "9203d116-4f72-4428-a135-b6340c626b12",
+    "user_id": "99df416f-cbab-4064-9bc1-dc2c328b1866",
+    "destination_id": "7d47c3b6-0524-49b5-82fd-19a9e775846c",
+    "booking_date": "2024-09-06",
+    "check_in": "2024-08-20",
+    "check_out": "2025-10-04",
+    "total_price": 2276.46
+  },
+  {
+    "booking_id": "8d24e8ab-6a68-42f8-925c-8a795a8b6191",
+    "user_id": "927d70ad-ce00-4a05-8529-53dbc5feb9b4",
+    "destination_id": "963750a3-93e2-4ba6-9183-9569ee848854",
+    "booking_date": "2024-03-31",
+    "check_in": "2024-09-18",
+    "check_out": "2025-02-22",
+    "total_price": 3751.33
+  },
+  {
+    "booking_id": "1c07aca1-194e-4259-99d3-259916c7795f",
+    "user_id": "63c85279-fc5a-4369-89df-72ec0ffac1a6",
+    "destination_id": "fab46c9d-8fdd-4bad-8e25-f79ae9fe0323",
+    "booking_date": "2024-09-04",
+    "check_in": "2024-05-17",
+    "check_out": "2025-08-01",
+    "total_price": 1070.97
+  },
+  {
+    "booking_id": "98efecfe-085b-48b5-9b48-33294ca5468e",
+    "user_id": "c9fd1193-31cb-41b1-945d-0a752fca0fb6",
+    "destination_id": "972a91e2-5815-4f22-ab1e-096efbd6f358",
+    "booking_date": "2024-02-23",
+    "check_in": "2024-03-31",
+    "check_out": "2025-05-23",
+    "total_price": 582.56
+  },
+  {
+    "booking_id": "4113c2e2-a66f-4564-b4ce-13d804bfd4f0",
+    "user_id": "eee84221-a06a-4c29-bd4b-c45f16ad16ad",
+    "destination_id": "18705729-c4d6-4d8b-9da1-f2fff787f868",
+    "booking_date": "2024-03-31",
+    "check_in": "2023-12-17",
+    "check_out": "2025-04-21",
+    "total_price": 2383.05
+  },
+  {
+    "booking_id": "0b6b4e92-3259-4c7e-8e47-bb25c0f9a4aa",
+    "user_id": "3bde7b51-761d-4125-96a3-7470f388807f",
+    "destination_id": "d5870134-45d2-493a-8fc3-e36f42f8f3a2",
+    "booking_date": "2024-02-26",
+    "check_in": "2024-02-02",
+    "check_out": "2024-11-14",
+    "total_price": 810.2
+  },
+  {
+    "booking_id": "fb411f33-c95d-45e9-ac3d-4009d17fed62",
+    "user_id": "4e0ae009-1400-4ebc-93f5-25f09e38a409",
+    "destination_id": "0bc5577f-a564-4ed7-b425-80c57b5abcb8",
+    "booking_date": "2024-03-21",
+    "check_in": "2024-07-22",
+    "check_out": "2025-10-06",
+    "total_price": 1454.2
+  },
+  {
+    "booking_id": "f5963857-d699-4215-bff4-e7e195632f87",
+    "user_id": "de94bbe7-820c-4198-9d24-74bf62cb0295",
+    "destination_id": "8a44f7b6-f7dc-4979-8c22-4f3f754c0cfb",
+    "booking_date": "2024-04-18",
+    "check_in": "2024-06-17",
+    "check_out": "2025-07-14",
+    "total_price": 6907.04
+  },
+  {
+    "booking_id": "174d34e3-a603-4904-9cb8-de9eb0f25936",
+    "user_id": "74272f96-bcd0-4c58-a807-b6ae2489847f",
+    "destination_id": "d0f67682-35fd-489a-a936-548ee9927d04",
+    "booking_date": "2024-01-27",
+    "check_in": "2024-06-14",
+    "check_out": "2025-04-21",
+    "total_price": 1992.2
+  },
+  {
+    "booking_id": "381f1e4f-40b5-42a7-ba62-db6344f9f4d8",
+    "user_id": "89fd687c-798f-48fe-b00c-38aa1e9e4067",
+    "destination_id": "e1029725-46f2-436c-97f2-c1250b8677ff",
+    "booking_date": "2024-01-13",
+    "check_in": "2024-03-13",
+    "check_out": "2025-06-13",
+    "total_price": 1617.84
+  },
+  {
+    "booking_id": "a1105964-96e0-4432-8f82-c760f26947f8",
+    "user_id": "eee84221-a06a-4c29-bd4b-c45f16ad16ad",
+    "destination_id": "8ae081ce-988d-4781-b4ac-15b5b30615ce",
+    "booking_date": "2024-02-17",
+    "check_in": "2024-06-03",
+    "check_out": "2024-12-08",
+    "total_price": 460.46
+  },
+  {
+    "booking_id": "2109ea79-7815-49c3-a0c5-67791c956a05",
+    "user_id": "e91a3f3d-7d30-4ecc-80cb-111545a0bf0d",
+    "destination_id": "59ec2127-7f79-4690-a0f5-25567378ef64",
+    "booking_date": "2024-08-03",
+    "check_in": "2024-09-16",
+    "check_out": "2025-07-30",
+    "total_price": 475.41
+  },
+  {
+    "booking_id": "2164a60f-fcba-4fb4-a85d-c3cbbf5ae427",
+    "user_id": "41ba5ef9-6c04-40b8-bc17-98040ca8224f",
+    "destination_id": "8a44f7b6-f7dc-4979-8c22-4f3f754c0cfb",
+    "booking_date": "2024-04-29",
+    "check_in": "2024-02-17",
+    "check_out": "2025-05-07",
+    "total_price": 1480.08
+  },
+  {
+    "booking_id": "7b02c31d-1935-4498-ba25-349d4381d4b6",
+    "user_id": "c03988fa-6080-47b7-9aed-7c18f2fe7185",
+    "destination_id": "f3b60dc6-7859-4788-b177-172c11ab65ae",
+    "booking_date": "2024-10-05",
+    "check_in": "2024-06-02",
+    "check_out": "2024-11-29",
+    "total_price": 1892.52
+  },
+  {
+    "booking_id": "4cfe4bef-e1ef-4c36-83ae-b82b3d364d23",
+    "user_id": "6b25cc87-24f1-4d05-93d5-bdb65dc13ef9",
+    "destination_id": "6d8a4f69-de21-45d5-bc80-29d0127e1629",
+    "booking_date": "2024-02-03",
+    "check_in": "2024-04-18",
+    "check_out": "2025-05-14",
+    "total_price": 1047.9
+  },
+  {
+    "booking_id": "ead65fb0-2239-4e01-9110-0682a98fda16",
+    "user_id": "204d3ad9-af4a-4f4d-ac76-20f83c27ab83",
+    "destination_id": "44d83271-4841-4f0e-b1d3-f6922fd183d5",
+    "booking_date": "2024-08-13",
+    "check_in": "2024-05-29",
+    "check_out": "2025-03-31",
+    "total_price": 925.5
+  },
+  {
+    "booking_id": "d422032c-e1cb-414a-9fb6-394e86233d2e",
+    "user_id": "6767d0fa-87d7-4194-99ff-4f7a1bee14dc",
+    "destination_id": "0bc5577f-a564-4ed7-b425-80c57b5abcb8",
+    "booking_date": "2024-06-20",
+    "check_in": "2024-07-26",
+    "check_out": "2024-10-29",
+    "total_price": 436.26
+  },
+  {
+    "booking_id": "d615a63d-4019-4477-bd32-abe26b9f2140",
+    "user_id": "c03988fa-6080-47b7-9aed-7c18f2fe7185",
+    "destination_id": "44d83271-4841-4f0e-b1d3-f6922fd183d5",
+    "booking_date": "2024-06-29",
+    "check_in": "2023-11-09",
+    "check_out": "2025-06-19",
+    "total_price": 1851.0
+  },
+  {
+    "booking_id": "b4eae38f-da66-447b-8277-4056f0457691",
+    "user_id": "7a933633-6cc7-41ee-afd8-69e8fca105cd",
+    "destination_id": "24d1ddc6-5237-4a83-89f0-ba963206eb62",
+    "booking_date": "2024-06-24",
+    "check_in": "2024-07-06",
+    "check_out": "2025-02-04",
+    "total_price": 1328.8
+  },
+  {
+    "booking_id": "16c8fc7c-c4b2-422a-a02c-a988e2703043",
+    "user_id": "0254a282-967a-4aa5-b2f2-91cf503256e8",
+    "destination_id": "575c5f77-5800-4edb-bb5e-1e50c4a5a1e5",
+    "booking_date": "2024-08-07",
+    "check_in": "2024-06-15",
+    "check_out": "2025-01-21",
+    "total_price": 3363.25
+  },
+  {
+    "booking_id": "0908807f-9a68-42fd-a8bb-7eb6552b2ba5",
+    "user_id": "295e4970-671c-47c5-a6c1-417dfe6a3024",
+    "destination_id": "2c0e5340-7498-4302-8664-8825bd7470f3",
+    "booking_date": "2024-03-20",
+    "check_in": "2024-10-02",
+    "check_out": "2025-05-05",
+    "total_price": 5072.06
+  },
+  {
+    "booking_id": "058ca8d2-9cae-4aa2-be81-17fdf6e55822",
+    "user_id": "56827f92-30ab-402e-ba39-d78b04f0e577",
+    "destination_id": "f339850e-50a7-4f86-ba2b-f9edc79426ce",
+    "booking_date": "2024-08-11",
+    "check_in": "2023-12-06",
+    "check_out": "2024-12-24",
+    "total_price": 1082.12
+  },
+  {
+    "booking_id": "f85b8fda-c971-47f9-94ea-703808692b5d",
+    "user_id": "ca4a570a-b3cb-4f47-8e19-e1cebf8854ab",
+    "destination_id": "d7c5715f-a998-42be-a2cc-5ceb5e91fdf3",
+    "booking_date": "2024-01-14",
+    "check_in": "2024-01-23",
+    "check_out": "2025-06-23",
+    "total_price": 1573.0
+  },
+  {
+    "booking_id": "fe4f4090-f85c-4ed4-8a91-dfe6886a6ac1",
+    "user_id": "6767d0fa-87d7-4194-99ff-4f7a1bee14dc",
+    "destination_id": "7d47c3b6-0524-49b5-82fd-19a9e775846c",
+    "booking_date": "2024-02-09",
+    "check_in": "2024-01-15",
+    "check_out": "2025-01-02",
+    "total_price": 758.82
+  },
+  {
+    "booking_id": "0a6cee4c-5017-41ee-a4ee-215705a500d8",
+    "user_id": "295e4970-671c-47c5-a6c1-417dfe6a3024",
+    "destination_id": "575c5f77-5800-4edb-bb5e-1e50c4a5a1e5",
+    "booking_date": "2024-04-17",
+    "check_in": "2023-12-13",
+    "check_out": "2025-06-30",
+    "total_price": 2446.0
+  },
+  {
+    "booking_id": "44a8c419-3630-426a-aa08-c6a0f530178a",
+    "user_id": "bcf239ea-3aca-4fe1-bdcf-30eedd0c873a",
+    "destination_id": "7d47c3b6-0524-49b5-82fd-19a9e775846c",
+    "booking_date": "2024-07-30",
+    "check_in": "2023-11-19",
+    "check_out": "2025-06-10",
+    "total_price": 3541.16
+  },
+  {
+    "booking_id": "415ea1f1-6401-49b4-a29e-9889b53246fd",
+    "user_id": "1b9f9206-bfa1-4554-99c6-dd2184d2bffb",
+    "destination_id": "5c98ac5c-83f0-4ad8-b55f-9bc6a466c2c8",
+    "booking_date": "2024-05-05",
+    "check_in": "2024-06-15",
+    "check_out": "2025-07-26",
+    "total_price": 2251.8
+  },
+  {
+    "booking_id": "91bb48b9-bc55-4064-b1e2-aaa48f44caec",
+    "user_id": "99df416f-cbab-4064-9bc1-dc2c328b1866",
+    "destination_id": "d5870134-45d2-493a-8fc3-e36f42f8f3a2",
+    "booking_date": "2024-01-31",
+    "check_in": "2024-04-07",
+    "check_out": "2024-12-13",
+    "total_price": 2228.05
+  },
+  {
+    "booking_id": "9939767d-547f-4351-aa78-9a516d8decca",
+    "user_id": "4e0ae009-1400-4ebc-93f5-25f09e38a409",
+    "destination_id": "a0bf0f43-738a-4d9c-b459-f27ff8714f79",
+    "booking_date": "2024-08-03",
+    "check_in": "2024-07-12",
+    "check_out": "2025-03-21",
+    "total_price": 2089.88
+  },
+  {
+    "booking_id": "70b45ee8-3e65-4de8-b0b2-8db368082907",
+    "user_id": "73a62ce2-995a-44fb-8735-381b396ed78b",
+    "destination_id": "963750a3-93e2-4ba6-9183-9569ee848854",
+    "booking_date": "2024-06-26",
+    "check_in": "2024-01-05",
+    "check_out": "2025-07-19",
+    "total_price": 2728.24
+  },
+  {
+    "booking_id": "f9d83154-c899-43b3-be7d-0331e8a6bcec",
+    "user_id": "daecc429-7689-4c9d-9b8d-fbc94b04017f",
+    "destination_id": "16543e97-0f60-4c8c-92e5-354cf3e2dea4",
+    "booking_date": "2024-06-17",
+    "check_in": "2024-04-06",
+    "check_out": "2025-10-02",
+    "total_price": 1385.73
+  },
+  {
+    "booking_id": "73bf164f-1dde-492e-b27a-5ecdb1f9ab1e",
+    "user_id": "a4c49737-09e4-43e1-852f-351ba061ebe6",
+    "destination_id": "084e61a8-1610-4554-a5be-167061cbd52a",
+    "booking_date": "2024-01-21",
+    "check_in": "2024-07-09",
+    "check_out": "2025-04-25",
+    "total_price": 6294.4
+  },
+  {
+    "booking_id": "1788a929-7f16-45a3-8db8-67389ad5aaa3",
+    "user_id": "a3754b74-67e3-419f-bcfd-9b2f0365e01d",
+    "destination_id": "d0f67682-35fd-489a-a936-548ee9927d04",
+    "booking_date": "2024-07-04",
+    "check_in": "2024-06-24",
+    "check_out": "2025-05-27",
+    "total_price": 1992.2
+  },
+  {
+    "booking_id": "ddbaac60-43aa-4d76-b861-73b2a988a866",
+    "user_id": "c6e14c5f-b364-468b-8bed-b0cce1e5528a",
+    "destination_id": "9bd87c6d-b5eb-4ced-8f86-b25982da8497",
+    "booking_date": "2024-08-04",
+    "check_in": "2024-03-01",
+    "check_out": "2024-10-18",
+    "total_price": 1627.22
+  },
+  {
+    "booking_id": "4413200e-8b6c-4b06-aba7-b19dc37cefd7",
+    "user_id": "450516c1-c7d4-4ce3-8371-a6284aa455b4",
+    "destination_id": "76a8c24f-8f59-4e04-b215-a30460196029",
+    "booking_date": "2024-03-30",
+    "check_in": "2024-03-16",
+    "check_out": "2025-01-22",
+    "total_price": 489.55
+  },
+  {
+    "booking_id": "74d2756d-d276-4478-aad3-6408c6e1414c",
+    "user_id": "eee84221-a06a-4c29-bd4b-c45f16ad16ad",
+    "destination_id": "3086fb12-b8ff-4b0a-93bc-c2b0315dc5cf",
+    "booking_date": "2024-08-23",
+    "check_in": "2024-08-03",
+    "check_out": "2025-03-19",
+    "total_price": 459.73
+  },
+  {
+    "booking_id": "311147e7-60cc-4c44-a522-258eb26756f1",
+    "user_id": "1b138df3-e6ae-4efd-bc3b-7f9463ba5bac",
+    "destination_id": "a7536d8d-7750-488a-9759-5031b7e36318",
+    "booking_date": "2024-03-04",
+    "check_in": "2024-06-16",
+    "check_out": "2025-06-02",
+    "total_price": 1135.92
+  },
+  {
+    "booking_id": "699287c1-e89f-450b-ac6f-fb4b711570fb",
+    "user_id": "d8ad867d-5ebc-4f73-87e5-371e7a76d12f",
+    "destination_id": "76a8c24f-8f59-4e04-b215-a30460196029",
+    "booking_date": "2024-05-20",
+    "check_in": "2023-11-23",
+    "check_out": "2025-05-22",
+    "total_price": 4895.5
+  },
+  {
+    "booking_id": "5888026a-96ad-423f-a773-8d1dc77bcf18",
+    "user_id": "7d6aa242-c9fc-4b8f-b480-010751669f34",
+    "destination_id": "18705729-c4d6-4d8b-9da1-f2fff787f868",
+    "booking_date": "2024-05-03",
+    "check_in": "2023-12-04",
+    "check_out": "2024-10-26",
+    "total_price": 4766.1
+  },
+  {
+    "booking_id": "f311ea99-3a70-42d2-a3f7-09edebc3f5bd",
+    "user_id": "a2ad2f05-8839-44a5-8360-bbf6ef68958a",
+    "destination_id": "24d1ddc6-5237-4a83-89f0-ba963206eb62",
+    "booking_date": "2024-03-10",
+    "check_in": "2024-10-02",
+    "check_out": "2025-08-02",
+    "total_price": 1691.2
+  },
+  {
+    "booking_id": "10d472f8-a6e7-4732-9b8a-7627dc0be0a4",
+    "user_id": "5dded282-e680-457e-8ee4-88b9209b06bb",
+    "destination_id": "5c98ac5c-83f0-4ad8-b55f-9bc6a466c2c8",
+    "booking_date": "2024-01-12",
+    "check_in": "2024-09-23",
+    "check_out": "2025-02-06",
+    "total_price": 1351.08
+  },
+  {
+    "booking_id": "bacdd03b-d0eb-487a-b19b-f66afda7cde2",
+    "user_id": "daecc429-7689-4c9d-9b8d-fbc94b04017f",
+    "destination_id": "d7c5715f-a998-42be-a2cc-5ceb5e91fdf3",
+    "booking_date": "2024-02-29",
+    "check_in": "2024-04-09",
+    "check_out": "2025-06-17",
+    "total_price": 4089.8
+  },
+  {
+    "booking_id": "39514eee-1912-4a48-abce-70c3cbb203e8",
+    "user_id": "aad4445a-751f-46da-b22c-dbfee67330ee",
+    "destination_id": "21b5a3a7-6400-4d28-8c6a-cc4c2892a501",
+    "booking_date": "2024-08-04",
+    "check_in": "2024-07-13",
+    "check_out": "2025-04-25",
+    "total_price": 3805.01
+  },
+  {
+    "booking_id": "370231c8-15d9-4028-97d3-5efaf4d0b711",
+    "user_id": "6c46ba4f-8a2d-4fab-b9bc-56308cf5f3dc",
+    "destination_id": "84a83731-062c-401d-a724-2a4ce50a7247",
+    "booking_date": "2024-04-07",
+    "check_in": "2023-10-17",
+    "check_out": "2025-09-20",
+    "total_price": 5466.01
+  },
+  {
+    "booking_id": "c9fcfa56-1e0c-45ce-a002-8e71739b6d27",
+    "user_id": "5f0c5e21-83e0-4157-a3f0-4cd5e80a7dc3",
+    "destination_id": "b676dbb5-61d2-4da5-8f61-af9b833a044e",
+    "booking_date": "2024-01-01",
+    "check_in": "2024-07-02",
+    "check_out": "2025-08-16",
+    "total_price": 484.46
+  },
+  {
+    "booking_id": "e5d0d025-72ab-4f3a-8dbb-4afc03fe1396",
+    "user_id": "6c46ba4f-8a2d-4fab-b9bc-56308cf5f3dc",
+    "destination_id": "53815d82-f446-4f45-ba90-753356edbdf8",
+    "booking_date": "2024-05-18",
+    "check_in": "2023-12-02",
+    "check_out": "2025-03-04",
+    "total_price": 855.54
+  },
+  {
+    "booking_id": "ddae277e-3bc7-4bf6-9bd6-f7652625b7db",
+    "user_id": "ca4a570a-b3cb-4f47-8e19-e1cebf8854ab",
+    "destination_id": "95f5515e-8774-4305-964c-b425ec6014a7",
+    "booking_date": "2024-01-12",
+    "check_in": "2023-12-22",
+    "check_out": "2025-07-12",
+    "total_price": 344.78
+  },
+  {
+    "booking_id": "34191fc6-8711-40e4-a932-68f96f5523a8",
+    "user_id": "99df416f-cbab-4064-9bc1-dc2c328b1866",
+    "destination_id": "0bc5577f-a564-4ed7-b425-80c57b5abcb8",
+    "booking_date": "2024-09-09",
+    "check_in": "2024-02-24",
+    "check_out": "2025-05-03",
+    "total_price": 727.1
+  },
+  {
+    "booking_id": "c401587b-4a68-4f68-b4c3-0f24d3f932f1",
+    "user_id": "a1772998-cdde-4856-8fc1-f7e0be142055",
+    "destination_id": "a68d95c7-68b7-44d5-9299-6fde84e60771",
+    "booking_date": "2024-01-07",
+    "check_in": "2024-03-08",
+    "check_out": "2024-11-11",
+    "total_price": 295.34
+  },
+  {
+    "booking_id": "99a87b77-4c97-4e17-8bd8-46364058806c",
+    "user_id": "4b6319cd-0795-46a3-a7c1-94b5e1f65ee0",
+    "destination_id": "029bf558-ac5a-4792-813f-52813492cefa",
+    "booking_date": "2024-09-11",
+    "check_in": "2024-03-05",
+    "check_out": "2025-09-01",
+    "total_price": 3517.8
+  },
+  {
+    "booking_id": "7a7193c2-d671-4b23-b517-6c22434fafd8",
+    "user_id": "73a62ce2-995a-44fb-8735-381b396ed78b",
+    "destination_id": "01d4d294-d17b-4890-804c-d78a620ffc54",
+    "booking_date": "2024-04-04",
+    "check_in": "2024-09-12",
+    "check_out": "2025-09-20",
+    "total_price": 2507.83
+  },
+  {
+    "booking_id": "5d6e7751-028f-4df2-96f4-54c31da0b914",
+    "user_id": "2a22d074-3480-4da1-95ea-a80512155f6c",
+    "destination_id": "8a44f7b6-f7dc-4979-8c22-4f3f754c0cfb",
+    "booking_date": "2024-04-09",
+    "check_in": "2024-02-26",
+    "check_out": "2025-07-22",
+    "total_price": 2466.8
+  },
+  {
+    "booking_id": "8cefa612-f1f6-4c36-a8ae-837495ac83a5",
+    "user_id": "9d8b1c29-9717-462a-abad-612a473889b7",
+    "destination_id": "9d092ebe-df39-410e-bf1f-ae6b0267fcad",
+    "booking_date": "2024-03-21",
+    "check_in": "2024-02-22",
+    "check_out": "2025-02-07",
+    "total_price": 1749.7
+  },
+  {
+    "booking_id": "d0e35c6e-7e26-4a6b-98a8-79bb3b406974",
+    "user_id": "e4351648-ddd4-4faa-995f-33e287692b7a",
+    "destination_id": "084e61a8-1610-4554-a5be-167061cbd52a",
+    "booking_date": "2024-01-26",
+    "check_in": "2024-08-29",
+    "check_out": "2024-12-08",
+    "total_price": 1798.4
+  }
+]

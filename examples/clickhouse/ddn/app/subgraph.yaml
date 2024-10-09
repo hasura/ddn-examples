@@ -1,0 +1,24 @@
+kind: Subgraph
+version: v2
+definition:
+  name: app
+  generator:
+    rootPath: .
+  includePaths:
+    - metadata
+  envMapping:
+    APP_MY_CLICKHOUSE_CLICKHOUSE_PASSWORD:
+      fromEnv: APP_MY_CLICKHOUSE_CLICKHOUSE_PASSWORD
+    APP_MY_CLICKHOUSE_CLICKHOUSE_USERNAME:
+      fromEnv: APP_MY_CLICKHOUSE_CLICKHOUSE_USERNAME
+    APP_MY_CLICKHOUSE_CLICKHOUSE_URL:
+      fromEnv: APP_MY_CLICKHOUSE_CLICKHOUSE_URL
+    APP_MY_CLICKHOUSE_AUTHORIZATION_HEADER:
+      fromEnv: APP_MY_CLICKHOUSE_AUTHORIZATION_HEADER
+    APP_MY_CLICKHOUSE_READ_URL:
+      fromEnv: APP_MY_CLICKHOUSE_READ_URL
+    APP_MY_CLICKHOUSE_WRITE_URL:
+      fromEnv: APP_MY_CLICKHOUSE_WRITE_URL
+  connectors:
+    - path: connector/my_clickhouse/connector.yaml
+      connectorLinkName: my_clickhouse

@@ -1,0 +1,180 @@
+---
+kind: ObjectType
+version: v1
+definition:
+  name: Reviews
+  fields:
+    - name: id
+      type: ObjectId!
+    - name: destinationId
+      type: String
+    - name: rating
+      type: Int
+    - name: reviewDate
+      type: String
+    - name: reviewId
+      type: String
+    - name: reviewText
+      type: String
+    - name: userId
+      type: String
+  graphql:
+    typeName: Reviews
+    inputTypeName: ReviewsInput
+  dataConnectorTypeMapping:
+    - dataConnectorName: my_mongo
+      dataConnectorObjectType: reviews
+      fieldMapping:
+        id:
+          column:
+            name: _id
+        destinationId:
+          column:
+            name: destination_id
+        rating:
+          column:
+            name: rating
+        reviewDate:
+          column:
+            name: review_date
+        reviewId:
+          column:
+            name: review_id
+        reviewText:
+          column:
+            name: review_text
+        userId:
+          column:
+            name: user_id
+
+---
+kind: TypePermissions
+version: v1
+definition:
+  typeName: Reviews
+  permissions:
+    - role: admin
+      output:
+        allowedFields:
+          - id
+          - destinationId
+          - rating
+          - reviewDate
+          - reviewId
+          - reviewText
+          - userId
+
+---
+kind: BooleanExpressionType
+version: v1
+definition:
+  name: ReviewsBoolExp
+  operand:
+    object:
+      type: Reviews
+      comparableFields:
+        - fieldName: id
+          booleanExpressionType: ObjectIdBoolExp
+        - fieldName: destinationId
+          booleanExpressionType: StringBoolExp
+        - fieldName: rating
+          booleanExpressionType: IntBoolExp
+        - fieldName: reviewDate
+          booleanExpressionType: StringBoolExp
+        - fieldName: reviewId
+          booleanExpressionType: StringBoolExp
+        - fieldName: reviewText
+          booleanExpressionType: StringBoolExp
+        - fieldName: userId
+          booleanExpressionType: StringBoolExp
+      comparableRelationships: []
+  logicalOperators:
+    enable: true
+  isNull:
+    enable: true
+  graphql:
+    typeName: ReviewsBoolExp
+
+---
+kind: AggregateExpression
+version: v1
+definition:
+  name: ReviewsAggExp
+  operand:
+    object:
+      aggregatedType: Reviews
+      aggregatableFields:
+        - fieldName: id
+          aggregateExpression: ObjectIdAggExp
+        - fieldName: destinationId
+          aggregateExpression: StringAggExp
+        - fieldName: rating
+          aggregateExpression: IntAggExp
+        - fieldName: reviewDate
+          aggregateExpression: StringAggExp
+        - fieldName: reviewId
+          aggregateExpression: StringAggExp
+        - fieldName: reviewText
+          aggregateExpression: StringAggExp
+        - fieldName: userId
+          aggregateExpression: StringAggExp
+  count:
+    enable: true
+  graphql:
+    selectTypeName: ReviewsAggExp
+
+---
+kind: Model
+version: v1
+definition:
+  name: Reviews
+  objectType: Reviews
+  source:
+    dataConnectorName: my_mongo
+    collection: reviews
+  filterExpressionType: ReviewsBoolExp
+  aggregateExpression: ReviewsAggExp
+  orderableFields:
+    - fieldName: id
+      orderByDirections:
+        enableAll: true
+    - fieldName: destinationId
+      orderByDirections:
+        enableAll: true
+    - fieldName: rating
+      orderByDirections:
+        enableAll: true
+    - fieldName: reviewDate
+      orderByDirections:
+        enableAll: true
+    - fieldName: reviewId
+      orderByDirections:
+        enableAll: true
+    - fieldName: reviewText
+      orderByDirections:
+        enableAll: true
+    - fieldName: userId
+      orderByDirections:
+        enableAll: true
+  graphql:
+    selectMany:
+      queryRootField: reviews
+    selectUniques:
+      - queryRootField: reviewsById
+        uniqueIdentifier:
+          - id
+    orderByExpressionType: ReviewsOrderBy
+    filterInputTypeName: ReviewsFilterInput
+    aggregate:
+      queryRootField: reviewsAggregate
+
+---
+kind: ModelPermissions
+version: v1
+definition:
+  modelName: Reviews
+  permissions:
+    - role: admin
+      select:
+        filter: null
+

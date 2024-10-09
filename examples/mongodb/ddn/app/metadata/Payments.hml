@@ -1,0 +1,180 @@
+---
+kind: ObjectType
+version: v1
+definition:
+  name: Payments
+  fields:
+    - name: id
+      type: ObjectId!
+    - name: amount
+      type: Double
+    - name: bookingId
+      type: String
+    - name: paymentDate
+      type: String
+    - name: paymentId
+      type: String
+    - name: paymentMethod
+      type: String
+    - name: status
+      type: String
+  graphql:
+    typeName: Payments
+    inputTypeName: PaymentsInput
+  dataConnectorTypeMapping:
+    - dataConnectorName: my_mongo
+      dataConnectorObjectType: payments
+      fieldMapping:
+        id:
+          column:
+            name: _id
+        amount:
+          column:
+            name: amount
+        bookingId:
+          column:
+            name: booking_id
+        paymentDate:
+          column:
+            name: payment_date
+        paymentId:
+          column:
+            name: payment_id
+        paymentMethod:
+          column:
+            name: payment_method
+        status:
+          column:
+            name: status
+
+---
+kind: TypePermissions
+version: v1
+definition:
+  typeName: Payments
+  permissions:
+    - role: admin
+      output:
+        allowedFields:
+          - id
+          - amount
+          - bookingId
+          - paymentDate
+          - paymentId
+          - paymentMethod
+          - status
+
+---
+kind: BooleanExpressionType
+version: v1
+definition:
+  name: PaymentsBoolExp
+  operand:
+    object:
+      type: Payments
+      comparableFields:
+        - fieldName: id
+          booleanExpressionType: ObjectIdBoolExp
+        - fieldName: amount
+          booleanExpressionType: DoubleBoolExp
+        - fieldName: bookingId
+          booleanExpressionType: StringBoolExp
+        - fieldName: paymentDate
+          booleanExpressionType: StringBoolExp
+        - fieldName: paymentId
+          booleanExpressionType: StringBoolExp
+        - fieldName: paymentMethod
+          booleanExpressionType: StringBoolExp
+        - fieldName: status
+          booleanExpressionType: StringBoolExp
+      comparableRelationships: []
+  logicalOperators:
+    enable: true
+  isNull:
+    enable: true
+  graphql:
+    typeName: PaymentsBoolExp
+
+---
+kind: AggregateExpression
+version: v1
+definition:
+  name: PaymentsAggExp
+  operand:
+    object:
+      aggregatedType: Payments
+      aggregatableFields:
+        - fieldName: id
+          aggregateExpression: ObjectIdAggExp
+        - fieldName: amount
+          aggregateExpression: DoubleAggExp
+        - fieldName: bookingId
+          aggregateExpression: StringAggExp
+        - fieldName: paymentDate
+          aggregateExpression: StringAggExp
+        - fieldName: paymentId
+          aggregateExpression: StringAggExp
+        - fieldName: paymentMethod
+          aggregateExpression: StringAggExp
+        - fieldName: status
+          aggregateExpression: StringAggExp
+  count:
+    enable: true
+  graphql:
+    selectTypeName: PaymentsAggExp
+
+---
+kind: Model
+version: v1
+definition:
+  name: Payments
+  objectType: Payments
+  source:
+    dataConnectorName: my_mongo
+    collection: payments
+  filterExpressionType: PaymentsBoolExp
+  aggregateExpression: PaymentsAggExp
+  orderableFields:
+    - fieldName: id
+      orderByDirections:
+        enableAll: true
+    - fieldName: amount
+      orderByDirections:
+        enableAll: true
+    - fieldName: bookingId
+      orderByDirections:
+        enableAll: true
+    - fieldName: paymentDate
+      orderByDirections:
+        enableAll: true
+    - fieldName: paymentId
+      orderByDirections:
+        enableAll: true
+    - fieldName: paymentMethod
+      orderByDirections:
+        enableAll: true
+    - fieldName: status
+      orderByDirections:
+        enableAll: true
+  graphql:
+    selectMany:
+      queryRootField: payments
+    selectUniques:
+      - queryRootField: paymentsById
+        uniqueIdentifier:
+          - id
+    orderByExpressionType: PaymentsOrderBy
+    filterInputTypeName: PaymentsFilterInput
+    aggregate:
+      queryRootField: paymentsAggregate
+
+---
+kind: ModelPermissions
+version: v1
+definition:
+  modelName: Payments
+  permissions:
+    - role: admin
+      select:
+        filter: null
+

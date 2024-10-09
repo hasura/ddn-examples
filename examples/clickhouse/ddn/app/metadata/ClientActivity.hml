@@ -1,0 +1,167 @@
+---
+kind: ObjectType
+version: v1
+definition:
+  name: ClientActivity
+  fields:
+    - name: activityType
+      type: String!
+    - name: clientId
+      type: UInt32!
+    - name: pageVisited
+      type: String!
+    - name: referrer
+      type: String!
+    - name: sessionId
+      type: String!
+    - name: timestamp
+      type: DateTime!
+  graphql:
+    typeName: ClientActivity
+    inputTypeName: ClientActivityInput
+  dataConnectorTypeMapping:
+    - dataConnectorName: my_clickhouse
+      dataConnectorObjectType: client_activity
+      fieldMapping:
+        activityType:
+          column:
+            name: activity_type
+        clientId:
+          column:
+            name: client_id
+        pageVisited:
+          column:
+            name: page_visited
+        referrer:
+          column:
+            name: referrer
+        sessionId:
+          column:
+            name: session_id
+        timestamp:
+          column:
+            name: timestamp
+
+---
+kind: TypePermissions
+version: v1
+definition:
+  typeName: ClientActivity
+  permissions:
+    - role: admin
+      output:
+        allowedFields:
+          - activityType
+          - clientId
+          - pageVisited
+          - referrer
+          - sessionId
+          - timestamp
+
+---
+kind: BooleanExpressionType
+version: v1
+definition:
+  name: ClientActivityBoolExp
+  operand:
+    object:
+      type: ClientActivity
+      comparableFields:
+        - fieldName: activityType
+          booleanExpressionType: StringBoolExp
+        - fieldName: clientId
+          booleanExpressionType: UInt32BoolExp
+        - fieldName: pageVisited
+          booleanExpressionType: StringBoolExp
+        - fieldName: referrer
+          booleanExpressionType: StringBoolExp
+        - fieldName: sessionId
+          booleanExpressionType: StringBoolExp
+        - fieldName: timestamp
+          booleanExpressionType: DateTimeBoolExp
+      comparableRelationships: []
+  logicalOperators:
+    enable: true
+  isNull:
+    enable: true
+  graphql:
+    typeName: ClientActivityBoolExp
+
+---
+kind: AggregateExpression
+version: v1
+definition:
+  name: ClientActivityAggExp
+  operand:
+    object:
+      aggregatedType: ClientActivity
+      aggregatableFields:
+        - fieldName: activityType
+          aggregateExpression: StringAggExp
+        - fieldName: clientId
+          aggregateExpression: UInt32AggExp
+        - fieldName: pageVisited
+          aggregateExpression: StringAggExp
+        - fieldName: referrer
+          aggregateExpression: StringAggExp
+        - fieldName: sessionId
+          aggregateExpression: StringAggExp
+        - fieldName: timestamp
+          aggregateExpression: DateTimeAggExp
+  count:
+    enable: true
+  graphql:
+    selectTypeName: ClientActivityAggExp
+
+---
+kind: Model
+version: v1
+definition:
+  name: ClientActivity
+  objectType: ClientActivity
+  source:
+    dataConnectorName: my_clickhouse
+    collection: client_activity
+  filterExpressionType: ClientActivityBoolExp
+  aggregateExpression: ClientActivityAggExp
+  orderableFields:
+    - fieldName: activityType
+      orderByDirections:
+        enableAll: true
+    - fieldName: clientId
+      orderByDirections:
+        enableAll: true
+    - fieldName: pageVisited
+      orderByDirections:
+        enableAll: true
+    - fieldName: referrer
+      orderByDirections:
+        enableAll: true
+    - fieldName: sessionId
+      orderByDirections:
+        enableAll: true
+    - fieldName: timestamp
+      orderByDirections:
+        enableAll: true
+  graphql:
+    selectMany:
+      queryRootField: clientActivity
+    selectUniques:
+      - queryRootField: clientActivityByTimestamp
+        uniqueIdentifier:
+          - timestamp
+    orderByExpressionType: ClientActivityOrderBy
+    filterInputTypeName: ClientActivityFilterInput
+    aggregate:
+      queryRootField: clientActivityAggregate
+
+---
+kind: ModelPermissions
+version: v1
+definition:
+  modelName: ClientActivity
+  permissions:
+    - role: admin
+      select:
+        filter: null
+

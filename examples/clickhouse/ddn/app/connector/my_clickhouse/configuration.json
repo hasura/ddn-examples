@@ -1,0 +1,27 @@
+{
+  "$schema": "configuration.schema.json",
+  "tables": {
+    "client_activity": {
+      "name": "client_activity",
+      "schema": "default",
+      "comment": "",
+      "primary_key": {
+        "name": "timestamp",
+        "columns": [
+          "timestamp"
+        ]
+      },
+      "return_type": {
+        "kind": "definition",
+        "columns": {
+          "activity_type": "String",
+          "client_id": "UInt32",
+          "page_visited": "String",
+          "referrer": "String",
+          "session_id": "String",
+          "timestamp": "DateTime"
+        }
+      }
+    }
+  }
+}

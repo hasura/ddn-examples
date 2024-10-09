@@ -1,0 +1,47 @@
+{
+  "name": "destinations",
+  "collections": {
+    "destinations": {
+      "type": "destinations"
+    }
+  },
+  "objectTypes": {
+    "destinations": {
+      "fields": {
+        "_id": {
+          "type": {
+            "scalar": "objectId"
+          }
+        },
+        "description": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        },
+        "destination_id": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        },
+        "location": {
+          "type": {
+            "nullable": {
+              "scalar": "string"
+            }
+          }
+        },
+        "price_per_night": {
+          "type": {
+            "nullable": {
+              "scalar": "double"
+            }
+          }
+        }
+      }
+    }
+  }
+}

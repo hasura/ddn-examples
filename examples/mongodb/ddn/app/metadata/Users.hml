@@ -1,0 +1,167 @@
+---
+kind: ObjectType
+version: v1
+definition:
+  name: Users
+  fields:
+    - name: id
+      type: ObjectId!
+    - name: dateRegistered
+      type: String
+    - name: email
+      type: String
+    - name: name
+      type: String
+    - name: phone
+      type: String
+    - name: userId
+      type: String
+  graphql:
+    typeName: Users
+    inputTypeName: UsersInput
+  dataConnectorTypeMapping:
+    - dataConnectorName: my_mongo
+      dataConnectorObjectType: users
+      fieldMapping:
+        id:
+          column:
+            name: _id
+        dateRegistered:
+          column:
+            name: date_registered
+        email:
+          column:
+            name: email
+        name:
+          column:
+            name: name
+        phone:
+          column:
+            name: phone
+        userId:
+          column:
+            name: user_id
+
+---
+kind: TypePermissions
+version: v1
+definition:
+  typeName: Users
+  permissions:
+    - role: admin
+      output:
+        allowedFields:
+          - id
+          - dateRegistered
+          - email
+          - name
+          - phone
+          - userId
+
+---
+kind: BooleanExpressionType
+version: v1
+definition:
+  name: UsersBoolExp
+  operand:
+    object:
+      type: Users
+      comparableFields:
+        - fieldName: id
+          booleanExpressionType: ObjectIdBoolExp
+        - fieldName: dateRegistered
+          booleanExpressionType: StringBoolExp
+        - fieldName: email
+          booleanExpressionType: StringBoolExp
+        - fieldName: name
+          booleanExpressionType: StringBoolExp
+        - fieldName: phone
+          booleanExpressionType: StringBoolExp
+        - fieldName: userId
+          booleanExpressionType: StringBoolExp
+      comparableRelationships: []
+  logicalOperators:
+    enable: true
+  isNull:
+    enable: true
+  graphql:
+    typeName: UsersBoolExp
+
+---
+kind: AggregateExpression
+version: v1
+definition:
+  name: UsersAggExp
+  operand:
+    object:
+      aggregatedType: Users
+      aggregatableFields:
+        - fieldName: id
+          aggregateExpression: ObjectIdAggExp
+        - fieldName: dateRegistered
+          aggregateExpression: StringAggExp
+        - fieldName: email
+          aggregateExpression: StringAggExp
+        - fieldName: name
+          aggregateExpression: StringAggExp
+        - fieldName: phone
+          aggregateExpression: StringAggExp
+        - fieldName: userId
+          aggregateExpression: StringAggExp
+  count:
+    enable: true
+  graphql:
+    selectTypeName: UsersAggExp
+
+---
+kind: Model
+version: v1
+definition:
+  name: Users
+  objectType: Users
+  source:
+    dataConnectorName: my_mongo
+    collection: users
+  filterExpressionType: UsersBoolExp
+  aggregateExpression: UsersAggExp
+  orderableFields:
+    - fieldName: id
+      orderByDirections:
+        enableAll: true
+    - fieldName: dateRegistered
+      orderByDirections:
+        enableAll: true
+    - fieldName: email
+      orderByDirections:
+        enableAll: true
+    - fieldName: name
+      orderByDirections:
+        enableAll: true
+    - fieldName: phone
+      orderByDirections:
+        enableAll: true
+    - fieldName: userId
+      orderByDirections:
+        enableAll: true
+  graphql:
+    selectMany:
+      queryRootField: users
+    selectUniques:
+      - queryRootField: usersById
+        uniqueIdentifier:
+          - id
+    orderByExpressionType: UsersOrderBy
+    filterInputTypeName: UsersFilterInput
+    aggregate:
+      queryRootField: usersAggregate
+
+---
+kind: ModelPermissions
+version: v1
+definition:
+  modelName: Users
+  permissions:
+    - role: admin
+      select:
+        filter: null
+
